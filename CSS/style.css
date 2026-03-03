@@ -1,0 +1,297 @@
+:root {
+    --color-pink: #e65f78;
+}
+html{
+  scroll-padding-top: 73px;
+}
+body {
+  font-family: "Nunito Sans", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+.text-pink{
+    color: var(--color-pink);
+}
+.bg-pink{
+  background-color: var(--color-pink);
+}
+
+@keyframes header-animation {
+  0% {
+    content: "|";
+  }
+  3% {
+    content: "D|";
+  }
+  5% {
+    content: "De|";
+  }
+  7% {
+    content: "Dev|";
+  }
+  10% {
+    content: "Deve|";
+  }
+  13% {
+    content: "Devel|";
+  }
+  15% {
+    content: "Develo|";
+  }
+  17% {
+    content: "Develop|";
+  }
+  20% {
+    content: "Developm|";
+  }
+  24% {
+    content: "Developme|";
+  }
+  25% {
+    content: "Developmen|";
+  }
+  27% {
+    content: "Development|";
+  }
+  30% {
+    content: "Development|";
+  }
+  32% {
+    content: "Developmen|";
+  }
+  35% {
+    content: "Developme|";
+  }
+  37% {
+    content: "Develop|";
+  }
+  40% {
+    content: "Develo|";
+  }
+  42% {
+    content: "Devel|";
+  }
+  45% {
+    content: "Deve|";
+  }
+  47% {
+    content: "Dev|";
+  }
+  50% {
+    content: "De|";
+  }
+  52% {
+    content: "Des|";
+  }
+  55% {
+    content: "Desi|";
+  }
+  57% {
+    content: "Desig|";
+  }
+  60% {
+    content: "Design|";
+  }
+  62% {
+    content: "Designe|";
+  }
+  65% {
+    content: "Designer|";
+  }
+  67% {
+    content: "Designer|";
+  }
+  70% {
+    content: "Designe|";
+  }
+  72% {
+    content: "Design|";
+  }
+  75% {
+    content: "Desig|";
+  }
+  77% {
+    content: "Desi|";
+  }
+  80% {
+    content: "Des|";
+  }
+  82% {
+    content: "De|";
+  }
+  85% {
+    content: "Dev|";
+  }
+  87% {
+    content: "Deve|";
+  }
+  90% {
+    content: "Devel|";
+  }
+  92% {
+    content: "Develo|";
+  }
+  95% {
+    content: "Develop|";
+  }
+  97% {
+    content: "Develope|";
+  }
+  100% {
+    content: "Developer|";
+  }
+}
+
+@keyframes updown {
+  0% {
+    bottom: 100px;
+  }
+  25% {
+    bottom: 50px;
+  }
+  50% {
+    bottom: 80px;
+  }
+  75% {
+    bottom: 50px;
+  }
+  100% {
+    bottom: 60px;
+  }
+}
+.navbar {
+  --bs-navbar-color: black;
+  --bs-navbar-hover-color: #e65f78;
+  --bs-navbar-active-color: #e65f78;
+}
+.header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+    url("../image/header-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  h1{
+    font-size: 4.0625rem;
+    &::after{
+        content: "|";
+        animation: header-animation 5s infinite alternate;
+        }
+  }
+  .shape{
+    width: 40px;
+    height: 70px;
+    bottom: 20px;
+    animation: updown 2s infinite alternate;
+
+    &::after{
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #fff;
+        
+        
+      }
+    }
+  }
+  .right{
+    li{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      border: 1px solid #c1c1c1;
+      border-radius: 50%;
+      transition: .5s;
+    }
+    li:hover{
+      border : 1px solid var(--color-pink);
+      color: var(--color-pink)
+    }
+  }
+  .client{
+    background-color: #F1F1F1;
+    .carousel-indicators{
+      bottom: -20px;
+      border-radius: 2px;
+      height: 6px;
+    }
+    .carousel-indicators [data-bs-target]{
+      background-color: var(--color-pink);
+    }
+  }
+  .portfolio{
+    .nav-pills .nav-link.active{
+      background-color: var(--color-pink);
+      border-radius: 100vh;
+    }
+    .nav-link{
+      color: rgb(87 , 87 , 87 )
+    }
+    .inner{
+      overflow: hidden;
+      &:hover{
+        .layer{
+          top: 0;
+        }
+        &::after{
+          background-color: rgba(0, 0, 0, 0.5);
+        }
+        img{
+        scale: 1.3;
+        }
+
+
+      }
+      &::after{
+        content: "";
+        background-color: rgba(0, 0, 0, 0);
+        position: absolute;
+        inset : 0;
+      }
+    }
+    .layer{
+      transition: 200ms;
+      z-index: 5;
+      color: #fff;
+      top:150%;
+    }
+    img{
+      transition: 200ms;
+    }
+    
+    }
+.blog{
+  background-color: #F1F1F1;
+}
+.contact{
+  .first-two input{
+    width:48%;
+  }
+  .form-control:focus{
+    border-color: var(--color-pink);
+    box-shadow: none;
+  }
+  textarea{
+    width:100%
+  }
+  .btn:hover{
+    background-color: var(--color-pink);
+  }
+}
+  
+
+
+    
